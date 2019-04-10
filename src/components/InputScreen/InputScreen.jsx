@@ -9,10 +9,17 @@ class InputScreen extends Component {
 		}
 
 		this.handleChange = this.handleChange.bind(this)
+		this.handleClick = this.handleClick.bind(this)
 	}
 
 	handleChange(e){
 		this.setState({ userInput : e.currentTarget.value })
+	}
+
+	handleClick(e){
+		e.preventDefault()
+		this.props.onSubmit(this.state)
+		console.log(this.state)
 	}
 
 	render(){
@@ -25,6 +32,7 @@ class InputScreen extends Component {
 						<label htmlFor="paste_area">Paste your text in here</label>
 						<textarea id="paste_area" onChange={ this.handleChange }></textarea>
 					</div>
+					<button onClick={ this.handleClick }>Submit</button>
 				</form> 
 			</React.Fragment>
 		) 

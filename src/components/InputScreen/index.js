@@ -4,8 +4,14 @@ import { handleUserInput } from "../../data/stateActions"
 
 const mapDispatchToProps = dispatch => {
 	return{
-		onSubmit: input => dispatch(handleUserInput(input))
+		onSubmit: data => { 
+
+			dispatch(handleUserInput(data))
+			console.log(data)
+		}
+
 	}
+
 } 
 
 export default connect(null, mapDispatchToProps)(InputScreen)

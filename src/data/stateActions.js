@@ -1,7 +1,8 @@
-export const handleUserInput = ({ input }) => {
+export const handleUserInput = ({ userInput }) => {
+	
   return {
 
     type: 'submitInput',
-    input: input,
+    input : userInput,
   }
 }
