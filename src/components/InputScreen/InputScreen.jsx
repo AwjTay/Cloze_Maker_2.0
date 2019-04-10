@@ -28,10 +28,8 @@ class InputScreen extends Component {
 
 			<React.Fragment>
 				<form>
-					<div>
-						<label htmlFor="paste_area">Paste your text in here</label>
-						<textarea id="paste_area" onChange={ this.handleChange }></textarea>
-					</div>
+					<label htmlFor="paste_area">Paste your text in here</label>
+					<textarea id="paste_area" onChange={ this.handleChange }></textarea>
 					<button onClick={ this.handleClick }>Submit</button>
 				</form> 
 			</React.Fragment>

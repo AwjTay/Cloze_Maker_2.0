@@ -1,7 +1,5 @@
 import initial from "./initial"
 
-
-
 const submitInput = (state, action) => {
 	return (	
 
@@ -9,31 +7,36 @@ const submitInput = (state, action) => {
 	)
 }
 
-const identifyKeywords = state => {
-	let keywords = state.unprocessed
-	console.log(keywords)
+const identifyKeywords = text => { 
+	let removed = text.filter(val => val.length > 8)
+	return removed
 }
 
+const createCloze = text => {
+	let cloze = text.map((val) => {
+		if(val.length > 8){
+			return val = ".............."
+		} 
+		else {
+			return val
+		}		
+	})	
+	return cloze
+}
+
+const storeKeywords = state => ({...state, removedWords : identifyKeywords(state.unprocessed)})
+
+const storeCloze = state => ({...state, processed : createCloze(state.unprocessed)})
 
 
 
-/*state.unprocessed.map((val) => {
-			if(val.length > 8){
-				val = "...............''"
-			} else{
 
-				return val				
-			}
 
-			return 
-		})
-
-*/
 
 
 const reducer = (state, action) => {
   switch (action.type) {
-  	case "submitInput" : return identifyKeywords(submitInput(state, action));
+  	case "submitInput" : return storeCloze(storeKeywords(submitInput(state, action)));
 	default:
 	    return state
   }

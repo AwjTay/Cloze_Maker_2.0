@@ -1,7 +1,7 @@
 const initial = {
 	unprocessed : [],
-	removedWords : "",
-	processed : "",
+	removedWords : [],
+	processed : [],
 }
 
 export default initial

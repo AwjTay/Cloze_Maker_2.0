@@ -3,7 +3,10 @@ import Result from './Result'
 
 const mapStateToProps = state => {
   return {
-    text: state.unprocessed
+    text: state.unprocessed,
+    keywords: state.removedWords,
+    cloze: state.processed
+
   }
 }
 
