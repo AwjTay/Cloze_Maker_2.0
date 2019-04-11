@@ -16,10 +16,10 @@ class InputScreen extends Component {
 		this.setState({ userInput : e.currentTarget.value })
 	}
 
+
 	handleClick(e){
 		e.preventDefault()
 		this.props.onSubmit(this.state)
-		console.log(this.state)
 	}
 
 	render(){
@@ -30,7 +30,10 @@ class InputScreen extends Component {
 				<form>
 					<label htmlFor="paste_area">Paste your text in here</label>
 					<textarea id="paste_area" onChange={ this.handleChange }></textarea>
-					<button onClick={ this.handleClick }>Submit</button>
+					<div className="user_control">
+						<button onClick={ this.handleClick }>Create</button>
+						<button className="reset_button" onClick={ () => this.props.reset() }>Reset</button>
+					</div>
 				</form> 
 			</React.Fragment>
 		) 

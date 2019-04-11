@@ -1,9 +1,8 @@
 import React from 'react'
+import { cleanKeywords } from "../../data/arrayLogic"
 
-// interpolates team experience value as width of 'temperature' div
-
-const Result = ({ text, keywords, cloze }) => {
-	console.log(text)
+const Result = ({ text, keywords, cloze}) => {
+	let cleanedWords = cleanKeywords(keywords)
 	return(
 		<React.Fragment>
 			<article>
@@ -11,7 +10,7 @@ const Result = ({ text, keywords, cloze }) => {
 					<p>{ cloze.join(" ") }</p>
 				</div>
 				<div>
-					<p>{ keywords.join(" - ") }</p>
+					<p>{ cleanedWords.join(" - ") }</p>
 				</div>
 			</article>
 		</React.Fragment>

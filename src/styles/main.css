@@ -1,15 +1,75 @@
+body{
+	font-family: Helvetica;
+	margin: 0%;
+}
+
+.page_wrapper{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(#f5f7fa, #c3cfe2);
+	
+}
+
 form{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
+h2{
+	display: flex;
+	justify-content: center;
+}
+
 form textarea{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: auto;
+    min-height:140px;
 	width: 80%;
-	margin: 5%;
+	padding: 2%;
+	margin: 3%;
+	margin-top: 1%;
+	font-size: 0.8rem;
+	border: 3px solid #cccccc;
+}
+
+.user_control{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.user_control input{
+	margin: 2%;
+	padding: 2%;
+	width: 20%;
+}
+
+button{
+  background: #33a532;
+  padding: 8px 20px 8px 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  border: 1px solid #257C9E;
+  font-size: 0.6rem;
+
+}
+
+.reset_button{
+	background: #cc3232;
+	margin-left: 2%;
 }
 
 article div, p{
-	margin: 5%;
-	font-size: 1rem;
+	margin: 2%;
+	font-size: 0.8rem;
 }

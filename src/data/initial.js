@@ -1,5 +1,6 @@
 const initial = {
 	unprocessed : [],
+	characters : 8,
 	removedWords : [],
 	processed : [],
 }
