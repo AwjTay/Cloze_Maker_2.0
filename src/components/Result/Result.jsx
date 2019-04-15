@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { cleanKeywords } from "../../data/arrayLogic"
+import ReactToPrint from 'react-to-print'
 
 const Result = ({ text, keywords, cloze}) => {
 	let cleanedWords = cleanKeywords(keywords)
@@ -16,4 +17,6 @@ const Result = ({ text, keywords, cloze}) => {
 		</React.Fragment>
 	)
 }
+
+
 export default Result

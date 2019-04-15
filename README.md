@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Please see below React boilerplate for developer notes.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -66,3 +68,29 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Concept
+
+This web app is intended as a simple resourcing tool for teachers, allowing them to quickly build "fill-the-gap" style exercises. I have designed and built this MVP version with teacher user-case in mind:
+
+Name: Tom. 
+ 
+age : 30
+
+education: Undergraduate degree
+	
+Works as a teacher in secondary school. 
+
+As a teacher, Tom must prepare resources for up to five lessons a day. Amongst these, he must also prepare assessment for learning tools that give his students an opportunity to check there understanding of the topics covered in lessons. A standard approach to this is to create 'cloze exercises' out of summary paragraphs, with the keywords removed, for students then to fill in. However, creating these exercises manually is time consuming, involving fiddily wordprocessing work. These exercises then need ot be formatted for print. Tom would like a tool that instantly creates cloze exercises from a submitted paragraph and automatically formats it for mass printing. This would save hime significant time to spend on his other duties.
+ 
+
+Comments at time of project submission:
+
+Things I would like still to do:
+
+- Implement a more refined version of the keyword selection system. I'm looking into react compatitible natural language toolkits such as retext to do this.
+
+- Integrate ReactToPrint successfully. This may need the use of 'hooks', as Result component is currently built as a functional component. 
+
+- Improve styling
+

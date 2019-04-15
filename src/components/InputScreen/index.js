@@ -6,11 +6,7 @@ const mapDispatchToProps = dispatch => {
 	return{
 		onSubmit: data => dispatch(handleUserInput(data)),
 		reset: () => dispatch(handleReset()),
-			
-		
-
 	}
-
 } 
 
 export default connect(null, mapDispatchToProps)(InputScreen)
