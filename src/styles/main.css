@@ -1,13 +1,14 @@
 body{
 	font-family: Helvetica;
 	margin: 0%;
+	
 }
 
 .page_wrapper{
-	position: absolute;
+	position: absolute;	
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(#f5f7fa, #c3cfe2);
+	background-color: #add8e6;
 	
 }
 
@@ -15,6 +16,7 @@ form{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 50%;
 }
 
 h2{
@@ -27,13 +29,16 @@ form textarea{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     overflow: auto;
+    background-color: #D3D3D3;
     min-height:140px;
 	width: 80%;
+	height: 60%;
 	padding: 2%;
 	margin: 3%;
 	margin-top: 1%;
-	font-size: 0.8rem;
-	border: 3px solid #cccccc;
+	font-size: 1rem;
+	border: 3px solid black;
+	border-radius: 10px;
 }
 
 .user_control{
@@ -70,6 +75,7 @@ button{
 }
 
 article div, p{
-	margin: 2%;
-	font-size: 0.8rem;
+	margin-left: 2%;
+	margin-right: 2%;
+	font-size: 1rem;
 }

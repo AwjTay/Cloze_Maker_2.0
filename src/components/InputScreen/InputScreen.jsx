@@ -28,11 +28,11 @@ class InputScreen extends Component {
 
 			<React.Fragment>
 				<form>
-					<label htmlFor="paste_area">Paste your text in here</label>
-					<textarea id="paste_area" onChange={ this.handleChange }></textarea>
+					<label ariaLabel="Paste your text in text area below" ariaRequired="true" htmlFor="paste_area">Paste your text in text area below</label>
+					<textarea aria-label="text area" id="paste_area" onChange={ this.handleChange }></textarea>
 					<div className="user_control">
-						<button onClick={ this.handleClick }>Create</button>
-						<button className="reset_button" onClick={ () => this.props.reset() }>Reset</button>
+						<button aria-label="click to create exercise" onClick={ this.handleClick }>Create</button>
+						<button aria-label="click to reset" className="reset_button" onClick={ () => this.props.reset() }>Reset</button>
 					</div>
 				</form> 
 			</React.Fragment>
@@ -41,3 +41,5 @@ class InputScreen extends Component {
 }
 
 export default InputScreen
+
+
